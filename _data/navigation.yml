@@ -1,0 +1,27 @@
+# Site navigation links
+
+- title: Gallery
+  url: /media/
+  excerpt: "Examples of media posts perfect for showcasing work, photographs, etc."
+  image: som.jpg
+
+- title: Blog
+  url: /articles/
+  excerpt: "Examples of long form posts."
+  image: blog.jpg
+
+- title: Service
+  url: /service/
+  excerpt: "Everything you need to know to get started with Skinny Bones and Jekyll."
+  image: ser.jpg
+  
+- title: About
+  url: /about/
+  excerpt: "All about Skinny Bones for Jekyll."
+  image: paint.jpg
+
+- title: Contact
+  url: /contact/
+  excerpt: "All about Skinny Bones for Jekyll."
+  image: brush.jpg
+  

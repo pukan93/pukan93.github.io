@@ -1,0 +1,47 @@
+---
+layout: default
+---
+
+<div id="main" role="main">			
+	<article class="wrap" itemscope itemtype="http://schema.org/Article">
+		{% if page.image.feature %}
+		<div class="page-feature">
+			<div class="page-image">
+				<img src="{{ site.url }}/images/{{ page.image.feature }}" class="page-feature-image" alt="{{ page.title }}" itemprop="image">
+				{% if page.image.credit %}{% include image-credit.html %}{% endif %}
+			</div><!-- /.page-image -->
+		</div><!-- /.page-feature -->
+		{% endif %}
+		{% if page.categories %}{% include breadcrumbs.html %}{% endif %}
+		<div class="page-title">
+			<h1>{{ page.title }}</h1>
+		</div>
+		<div class="inner-wrap">
+			<nav class="toc"></nav><!-- /.toc -->
+			<div id="content" class="page-content" itemprop="articleBody">
+				{{ content }}
+				<hr />
+				<footer class="page-footer">
+					{% if page.categories %}{% include page-author.html %}{% endif %}
+					{% if page.share != false %}{% include share-this.html %}{% endif %}
+					{% include page-meta.html %}
+				</footer><!-- /.footer -->
+				<aside>
+					{% if page.comments == true %}{% include comments.html %}{% endif %}
+				</aside>
+			</div><!-- /.content -->
+		</div><!-- /.inner-wrap -->
+		{% if page.ads == true %}<div class="ads">{% include advertising.html %}</div><!-- /.ads -->{% endif %}
+	</article><!-- ./wrap -->
+</div><!-- /#main -->
+
+<center><div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/th_TH/sdk.js#xfbml=1&version=v2.0";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+<div class="fb-comments" data-href="http://elapaint.github.io/" data-numposts="5" data-colorscheme="light"></div></center>
